@@ -55,7 +55,7 @@ export function organizationSchema() {
     '@id': `${SITE_URL}/#organization`,
     name: SITE.name,
     url: SITE_URL,
-    logo: { '@type': 'ImageObject', url: `${SITE_URL}/icon.png`, width: 512, height: 512 },
+    logo: { '@type': 'ImageObject', url: `${SITE_URL}/brand/sahara-guides-logo.png`, width: 900, height: 810 },
     description: SITE.description,
     email: SITE.email,
     ...(sameAs.length ? { sameAs } : {}),

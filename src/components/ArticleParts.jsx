@@ -123,7 +123,7 @@ export function Sources({ sources, verifiedAt }) {
 export function AuthorBox({ author }) {
   return (
     <section aria-label="About the author" className="mt-16 flex gap-5 border-t border-sand-200 pt-8">
-      <LogoMark className="h-14 w-14 shrink-0" />
+      <LogoMark className="h-16 w-auto shrink-0" />
       <div>
         <p className="eyebrow">Written and fact-checked by</p>
         <p className="mt-1 font-serif text-xl text-ink-900">

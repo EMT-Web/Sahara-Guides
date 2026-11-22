@@ -30,7 +30,7 @@ export default function Header() {
       </a>
       <div className="container-site flex h-16 items-center justify-between gap-6 lg:h-[4.5rem]">
         <Link href="/" aria-label="Sahara Guides home" className="shrink-0">
-          <Logo />
+          <Logo priority />
         </Link>
 
         <nav aria-label="Main" className="hidden xl:block">

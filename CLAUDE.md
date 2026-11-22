@@ -29,6 +29,7 @@ Commands: `npm run dev` (port 5000), `npm run build`, `npm run lint`, `npm run c
 
 - Use `buildMetadata()` from `src/lib/seo.js` for every page's metadata, and `JsonLd` for schema.
 - Images: register photos in `src/data/images.js` (with width/height/alt/caption). Keep sources ≤ 2000px; strip EXIF (GPS!) before committing: `convert in.jpg -auto-orient -strip -resize '2000x2000>' -quality 78 out.jpg`.
+- Logo: `src/components/Logo.jsx` uses `public/brand/` (emblem.png, wordmark.png, wordmark-light.png for dark backgrounds, sahara-guides-logo.png full lockup for schema/social). Favicons are `src/app/icon.png` and `apple-icon.png` (emblem on cream).
 - Design tokens live in `tailwind.config.js` (`paper`, `sand`, `ink`, `clay`, `majorelle`, `oasis`, `night`); reusable classes in `src/app/globals.css`. Use `clay-600+` for text on light backgrounds (AA contrast).
 - Keep JavaScript minimal: the header mega menu is CSS-driven, the map is a zero-JS SVG, FAQs use `<details>`. Client components only where interaction requires it (search, planner, forms, share, consent).
 - Analytics that set cookies (GA4, Clarity) must stay behind consent (`src/components/Analytics.jsx`).

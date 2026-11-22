@@ -29,8 +29,8 @@ const seaPath = `${coastPath} L${x(-10.3)} ${y(29.3)} L0 0 L${W} 0 L${W} ${y(35.
 
 const RANGES = [
   { label: 'RIF', lat: 35.0, lon: -4.4, rotate: -8 },
-  { label: 'MIDDLE ATLAS', lat: 33.3, lon: -5.0, rotate: -35 },
-  { label: 'HIGH ATLAS', lat: 31.75, lon: -6.3, rotate: -22 },
+  { label: 'MIDDLE ATLAS', lat: 33.25, lon: -4.3, rotate: -35 },
+  { label: 'HIGH ATLAS', lat: 32.25, lon: -5.4, rotate: -28 },
   { label: 'ANTI-ATLAS', lat: 30.0, lon: -8.0, rotate: -18 },
 ]
 
@@ -51,16 +51,16 @@ export default function MoroccoMap({ highlight }) {
         {[[31.15, -3.98, 22, 52], [29.84, -6.25, 48, 26]].map(([la, lo, rx, ry]) => (
           <ellipse key={lo} cx={x(lo)} cy={y(la)} rx={rx} ry={ry} fill="#E2A36F" opacity="0.45" />
         ))}
-        <text x={x(-9.2)} y={y(33.2)} className="fill-majorelle-700 font-serif italic" fontSize="22" opacity="0.7">Atlantic Ocean</text>
-        <text x={x(-4.6)} y={y(35.75)} className="fill-majorelle-700 font-serif italic" fontSize="18" opacity="0.7">Mediterranean Sea</text>
+        <text x={x(-9.2)} y={y(33.2)} className="fill-majorelle-700 font-serif italic" fontSize="26" opacity="0.7">Atlantic Ocean</text>
+        <text x={x(-4.6)} y={y(35.75)} className="fill-majorelle-700 font-serif italic" fontSize="22" opacity="0.7">Mediterranean Sea</text>
         {RANGES.map((r) => (
           <text
             key={r.label}
             x={x(r.lon)}
             y={y(r.lat)}
             transform={`rotate(${r.rotate} ${x(r.lon)} ${y(r.lat)})`}
-            fontSize="13"
-            letterSpacing="6"
+            fontSize="15"
+            letterSpacing="7"
             className="fill-sand-500 font-sans"
             textAnchor="middle"
           >
@@ -72,17 +72,19 @@ export default function MoroccoMap({ highlight }) {
           const cx = x(d.lon)
           const cy = y(d.lat)
           const active = highlight === d.slug
-          const left = d.labelSide ? d.labelSide === 'left' : d.lon > -4.5
+          const side = d.labelSide || (d.lon > -4.5 ? 'left' : 'right')
+          const left = side === 'left'
+          const vertical = side === 'top' || side === 'bottom'
           return (
             <Link key={d.slug} href={href} className="map-link" aria-label={`${d.name}: ${d.guide ? 'read the guide' : 'overview'}`}>
-              <circle className="map-pin" cx={cx} cy={cy} r={d.guide ? 7 : 5} fill={d.guide ? '#A84E22' : '#FBF8F3'} stroke="#A84E22" strokeWidth="2.5" />
+              <circle className="map-pin" cx={cx} cy={cy} r={d.guide ? 9 : 7} fill={d.guide ? '#A84E22' : '#FBF8F3'} stroke="#A84E22" strokeWidth="2.5" />
               {active ? <circle cx={cx} cy={cy} r="14" fill="none" stroke="#A84E22" strokeWidth="1.5" /> : null}
               <text
                 className="map-label font-sans"
-                x={left ? cx - 11 : cx + 11}
-                y={cy + 4.5}
-                fontSize="15"
-                textAnchor={left ? 'end' : 'start'}
+                x={vertical ? cx : left ? cx - 14 : cx + 14}
+                y={side === 'top' ? cy - 15 : side === 'bottom' ? cy + 29 : cy + 6.5}
+                fontSize="20"
+                textAnchor={vertical ? 'middle' : left ? 'end' : 'start'}
                 fill="#2A251F"
                 stroke="#F4EDE2"
                 strokeWidth="4"
@@ -95,7 +97,7 @@ export default function MoroccoMap({ highlight }) {
         })}
         {dakhla ? (
           <Link href={`/destinations#${dakhla.slug}`} className="map-link">
-            <text x={x(-10.1)} y={H - 18} fontSize="14" className="map-label fill-ink-700 font-sans">
+            <text x={x(-10.1)} y={H - 18} fontSize="18" className="map-label fill-ink-700 font-sans">
               ↓ Dakhla: more than 1,100 km south of Agadir by road
             </text>
           </Link>
@@ -103,7 +105,7 @@ export default function MoroccoMap({ highlight }) {
         {/* Scale bar: 100 km */}
         <g transform={`translate(${W - 190} ${H - 30})`}>
           <line x1="0" y1="0" x2={(100 / (111.32 * Math.cos((32.5 * Math.PI) / 180) * (LON1 - LON0))) * W} y2="0" stroke="#3D372F" strokeWidth="2" />
-          <text x="0" y="-8" fontSize="12" className="fill-ink-700 font-sans">100 km</text>
+          <text x="0" y="-8" fontSize="16" className="fill-ink-700 font-sans">100 km</text>
         </g>
       </svg>
       <figcaption className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-1 text-sm text-ink-600">

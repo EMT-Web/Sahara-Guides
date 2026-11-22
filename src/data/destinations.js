@@ -30,7 +30,7 @@ export const DESTINATIONS = [
     days: '1 day', airport: 'Fes-Saïss (FEZ), about 1 hour',
   },
   {
-    slug: 'volubilis', name: 'Volubilis', region: 'imperial-cities', type: 'Heritage site', lat: 34.07, lon: -5.55, labelSide: 'left',
+    slug: 'volubilis', name: 'Volubilis', region: 'imperial-cities', type: 'Heritage site', lat: 34.07, lon: -5.55, labelSide: 'top',
     summary: 'The best-preserved Roman site in Morocco, known for its floor mosaics, triumphal arch and basilica, set in olive country below the holy town of Moulay Idriss Zerhoun. A UNESCO World Heritage Site.',
     days: 'Half a day', airport: 'Fes-Saïss (FEZ), about 1 hour 15 minutes',
   },
@@ -60,7 +60,7 @@ export const DESTINATIONS = [
     days: '2 nights', airport: 'Essaouira Mogador (ESU) or Marrakech (RAK)',
   },
   {
-    slug: 'agadir', name: 'Agadir', region: 'atlantic-coast', type: 'Beach resort', lat: 30.42, lon: -9.6,
+    slug: 'agadir', name: 'Agadir', region: 'atlantic-coast', type: 'Beach resort', lat: 30.42, lon: -9.6, labelSide: 'bottom',
     summary: 'Rebuilt after the 1960 earthquake, Agadir is a modern resort with a long sandy bay and a mild climate all year. It is a practical base for the Souss Valley, Taroudant and the surf villages to the north such as Taghazout.',
     days: '2–4 days', airport: 'Agadir Al Massira (AGA)',
   },

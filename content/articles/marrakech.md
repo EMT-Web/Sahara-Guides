@@ -3,7 +3,7 @@ title: "Marrakech travel guide: what to see, where to stay and how long to spend
 seoTitle: "Marrakech Travel Guide: Things to Do, Where to Stay & Tips"
 category: destinations
 slug: marrakech
-description: "A complete Marrakech guide: the medina's key sights, Jardin Majorelle, where to stay (medina vs Gueliz), how many days you need, getting from the airport, day trips, food, scams to avoid and the best time to visit."
+description: "Marrakech travel guide: the medina's best sights, Jardin Majorelle, where to stay, how many days you need, airport transfers, day trips and scams to avoid."
 standfirst: "Marrakech is Morocco's most visited city and, for most travellers, their first taste of the country: a walled medina of palaces, souks and rooftop terraces around the great square of Jemaa el-Fna, with the snow-capped High Atlas on the horizon. It can be overwhelming at first. This guide helps you make the most of it."
 publishedAt: 2026-11-22
 updatedAt: 2026-11-22

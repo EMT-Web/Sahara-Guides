@@ -3,7 +3,7 @@ title: "7 days in Morocco: three realistic itineraries"
 seoTitle: "7 Days in Morocco: 3 Realistic Itineraries with Driving Times"
 category: morocco-itineraries
 slug: 7-days-in-morocco
-description: "Three tested-on-the-map 7-day Morocco itineraries: Marrakech to Fes via the Sahara, a low-driving Marrakech, Atlas and Essaouira week, and an imperial cities trip by train. Day-by-day plans with real distances and drive times."
+description: "Three realistic 7-day Morocco itineraries: Marrakech to Fes via the Sahara, Marrakech with the Atlas and Essaouira, and the imperial cities by train."
 standfirst: "A week is enough to see a lot of Morocco, but not all of it. The mistake most first-time itineraries make is trying to fit Marrakech, Fes, Chefchaouen and the Sahara into seven days, which turns the trip into a road marathon. Here are three routes that work, with honest driving times for every day."
 publishedAt: 2026-11-22
 updatedAt: 2026-11-22

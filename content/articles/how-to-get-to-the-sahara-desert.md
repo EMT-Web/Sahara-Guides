@@ -3,12 +3,12 @@ title: "How to get to the Sahara Desert in Morocco"
 seoTitle: "How to Get to the Sahara Desert in Morocco (by Road, Bus & Air)"
 category: sahara-desert
 slug: how-to-get-to-the-sahara-desert
-description: "How to reach Morocco's Sahara Desert from Marrakech, Fes, Casablanca, Errachidia, Ouarzazate, Agadir and Tangier: realistic driving times, buses, flights to Errachidia and Ouarzazate, tours and what happens when you arrive."
+description: "How to reach Morocco's Sahara from Marrakech, Fes and other cities: realistic driving times, buses, flights to Errachidia and Ouarzazate, and tours."
 standfirst: "Morocco's big dunes are a long way from its airports. Getting there well means choosing the right dune sea, the right starting point and enough days. This guide covers every practical way to reach Erg Chebbi and Erg Chigaga, with realistic times from each city."
 publishedAt: 2026-11-22
 updatedAt: 2026-11-22
 verifiedAt: 2026-11-22
-heroImage: camel-caravan-erg-chebbi
+heroImage: camels-resting
 featured: true
 editorsPick: true
 tags: [sahara, merzouga, erg chebbi, erg chigaga, errachidia, flights, desert camp]
@@ -73,7 +73,7 @@ related:
 
 If you have not decided between them, read our [comparison of Erg Chebbi and Erg Chigaga](/sahara-desert/erg-chebbi-vs-erg-chigaga) first. This guide assumes Erg Chebbi unless stated, because that is where most travellers go.
 
-![](camels-resting)
+![](nomad-tent-hamada)
 
 ## Distances and driving times to the dunes
 

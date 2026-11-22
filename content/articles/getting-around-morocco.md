@@ -3,7 +3,7 @@ title: "Getting around Morocco: trains, buses, cars, taxis and flights"
 seoTitle: "Getting Around Morocco: Trains, Buses, Driving & Domestic Flights"
 category: transportation
 slug: getting-around-morocco
-description: "How to travel around Morocco: the Al Boraq high-speed train and ONCF network, CTM and Supratours buses, renting a car and driving rules, private drivers, grand and petit taxis, domestic flights and realistic journey times between cities."
+description: "How to get around Morocco by train, bus, car, taxi and plane: Al Boraq and ONCF, CTM and Supratours, driving tips, private drivers and real journey times."
 standfirst: "Morocco is easy to travel around once you know which tool fits which part of the country. Trains are fast and comfortable between Tangier, Rabat, Casablanca, Fes and Marrakech. Buses reach almost everywhere else. And for the mountains and the desert, nothing beats a car and a good driver."
 publishedAt: 2026-11-22
 updatedAt: 2026-11-22

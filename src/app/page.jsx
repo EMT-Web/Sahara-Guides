@@ -52,7 +52,7 @@ export default async function HomePage() {
   const featuredRoutes = ['mkch-fes-7', 'mkch-coast-mountains-5', 'tangier-loop-10', 'erh-merzouga-3']
     .map((id) => ROUTES.find((r) => r.id === id))
     .filter(Boolean)
-  const destCards = DESTINATIONS.filter((d) => ['chefchaouen', 'essaouira', 'ait-ben-haddou', 'imlil', 'rabat', 'dades-valley'].includes(d.slug))
+  const destCards = DESTINATIONS.filter((d) => ['chefchaouen', 'essaouira', 'ait-ben-haddou', 'imlil'].includes(d.slug))
 
   const hero = images['camel-caravan-erg-chebbi']
 
@@ -62,6 +62,7 @@ export default async function HomePage() {
       <section className="relative isolate -mt-px overflow-hidden bg-night-900">
         <Image src={hero.src} alt={hero.alt} fill priority sizes="100vw" className="-z-10 object-cover object-[50%_60%]" />
         <div className="scrim-hero absolute inset-0 -z-10" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-night-900/75 via-night-900/35 to-transparent" />
         <div className="container-site flex min-h-[86vh] flex-col justify-end pb-14 pt-32 sm:min-h-[44rem] sm:pb-20">
           <p className="eyebrow-light">Independent · Researched · Updated</p>
           <h1 className="display mt-4 max-w-4xl text-paper">
@@ -123,11 +124,11 @@ export default async function HomePage() {
       <section className="mt-28 bg-sand-100 py-20" aria-labelledby="explore">
         <div className="container-site">
           <SectionHeading id="explore" eyebrow="Explore Morocco" title="Where do you want to go?" intro="Select a place on the map, or browse a few of the destinations travellers ask us about most." href="/destinations" linkLabel="Destinations hub" />
-          <div className="grid gap-10 lg:grid-cols-[1.25fr_1fr]">
+          <div className="grid gap-10 lg:grid-cols-[1.6fr_1fr]">
             <div className="card p-3 sm:p-5" data-reveal>
               <MoroccoMap />
             </div>
-            <ul className="grid gap-4 sm:grid-cols-2">
+            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 lg:content-start">
               {destCards.map((d) => (
                 <li key={d.slug} className="card group relative p-5 transition-shadow hover:shadow-lg" data-reveal>
                   <p className="text-xs font-medium uppercase tracking-wide text-ink-500">{d.type}</p>

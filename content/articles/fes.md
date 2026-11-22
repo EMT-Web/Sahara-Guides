@@ -3,7 +3,7 @@ title: "Fes travel guide: the medina, the sights and how to plan your visit"
 seoTitle: "Fes Travel Guide: Medina Sights, Where to Stay & Day Trips"
 category: destinations
 slug: fes
-description: "A practical guide to Fes, Morocco: what to see in Fes el-Bali, how to navigate the medina, official guides, the tanneries, where to stay, how many days you need, getting there and day trips to Meknes, Volubilis and Chefchaouen."
+description: "Plan your visit to Fes: the best sights in Fes el-Bali, how to handle the medina, the tanneries, where to stay, how many days you need and the best day trips."
 standfirst: "Fes is the most complete medieval city in the Arab world and Morocco's spiritual and cultural capital. Its old medina, Fes el-Bali, is a UNESCO World Heritage Site and one of the largest car-free urban areas on earth. It is intense, fascinating and easier to enjoy with a little preparation."
 publishedAt: 2026-11-22
 updatedAt: 2026-11-22

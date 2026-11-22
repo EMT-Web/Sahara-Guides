@@ -11,7 +11,7 @@ Everything below needs your accounts or approval. Nothing here has been done yet
 
 1. In Vercel, **Add New → Project** and import `saharaguides/Sahara-Guides`. Framework: Next.js (auto-detected). No build settings to change.
 2. Add the environment variables from `.env.example` (at minimum `NEXT_PUBLIC_SITE_URL=https://saharaguides.com`).
-3. Deploy. Check the preview URL. Preview deployments automatically send `Disallow: /` in robots.txt, so they will not be indexed.
+3. Deploy. Check the preview URL. Temporary `*.vercel.app` addresses send `Disallow: /` and a `noindex` header, so only saharaguides.com can be indexed.
 4. **Domain (needs your approval):** in Project → Settings → Domains, add `saharaguides.com` and `www.saharaguides.com`. Choose the apex (`saharaguides.com`) as primary and redirect `www` to it. Vercel shows the DNS records to add at your registrar. Only change DNS when you are ready to go live.
 
 ## 3. Sanity (CMS)

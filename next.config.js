@@ -50,6 +50,12 @@ module.exports = {
   async headers() {
     return [
       { source: '/(.*)', headers: securityHeaders },
+      // Keep temporary Vercel addresses out of search results.
+      {
+        source: '/(.*)',
+        has: [{ type: 'host', value: '(?<sub>.*)\\.vercel\\.app' }],
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
       {
         source: '/images/(.*)',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],

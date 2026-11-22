@@ -18,7 +18,7 @@ Tested against the **production build** (`next build && next start`) on a local 
 | Redirects | ✅ `/plan` → `/plan-your-trip`, `/feed` → `/rss.xml` (308) |
 | 404 | ✅ Custom page, real 404 status |
 | Search noindex | ✅ `/search` is `noindex, follow`; `/search?` is disallowed in robots.txt |
-| Preview deployments | ✅ robots.txt returns `Disallow: /` when `VERCEL_ENV` is not `production` |
+| Non-canonical hosts | ✅ robots.txt returns `Disallow: /` and `*.vercel.app` sends `X-Robots-Tag: noindex` unless the host is saharaguides.com |
 
 ## Functional tests (Playwright, Chromium)
 

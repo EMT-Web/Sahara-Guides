@@ -78,7 +78,7 @@ export default async function HomePage() {
               id="hero-search"
               name="q"
               type="search"
-              placeholder="Search destinations, questions and guides"
+              placeholder="Search the guides"
               className="min-w-0 flex-1 bg-transparent px-2 py-3 text-base text-ink-900 placeholder:text-ink-500 focus:outline-none"
             />
             <button type="submit" className="btn-primary !py-3">Search</button>

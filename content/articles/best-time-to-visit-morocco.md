@@ -42,9 +42,9 @@ faqs:
   - question: "When is the best time to see the Sahara Desert in Morocco?"
     answer: "October to April. Autumn and spring give warm days and pleasant nights. December to February are clear and calm but nights in the dunes can approach freezing, so good camps provide heavy blankets. Avoid June to August unless you can cope with extreme heat."
 sources:
-  - title: "Marrakech holiday weather"
-    publisher: "Met Office (UK)"
-    url: "https://weather.metoffice.gov.uk/travel/holiday-weather/africa/morocco/marrakech"
+  - title: "Climate normals: Marrakech (station 60230)"
+    publisher: "Japan Meteorological Agency, World Climate data"
+    url: "https://www.data.jma.go.jp/cpd/monitor/nrmlist/NrmMonth.php?stn=60230"
   - title: "Climate in Errachidia"
     publisher: "Climates to Travel"
     url: "https://www.climatestotravel.com/climate/morocco/errachidia"

@@ -220,11 +220,16 @@ export function suggestRoutes({ start, days, style }) {
     let score = 0
     if (r.start === start) score += 50
     else if (r.end === start) score += 15
-    if (d >= r.minDays && d <= r.maxDays) score += 40
-    else if (d > r.maxDays) score += Math.max(0, 25 - (d - r.maxDays) * 4)
+    // A route that starts elsewhere (and cannot simply be reversed) needs a
+    // day to get to its starting point.
+    const transfer = r.start === start || r.end === start ? 0 : 1
+    const min = r.minDays + transfer
+    const max = r.maxDays + transfer
+    if (d >= min && d <= max) score += 40
+    else if (d > max) score += Math.max(0, 25 - (d - max) * 4)
     else score -= 100 // not enough days: never suggest an impossible route
     if (style && r.styles.includes(style)) score += 10
-    return { route: r, score, spare: d - r.days }
+    return { route: r, score, spare: Math.max(0, d - r.days - (r.start === start || r.end === start ? 0 : 1)) }
   })
     .filter((x) => x.score > 0)
     .sort((a, b) => b.score - a.score)

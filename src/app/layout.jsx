@@ -12,7 +12,7 @@ import './globals.css'
 const serif = Newsreader({
   subsets: ['latin'],
   style: ['normal', 'italic'],
-  axes: ['opsz'],
+  weight: ['400', '500', '600'],
   display: 'swap',
   variable: '--font-serif',
   adjustFontFallback: false,

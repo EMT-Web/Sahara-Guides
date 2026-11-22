@@ -61,6 +61,7 @@ export default function ItineraryPlanner({ defaultStart = 'Marrakech', defaultDa
       </form>
 
       <div aria-live="polite">
+        <h2 className="sr-only">Suggested routes</h2>
         {results.length === 0 ? (
           <div className="card p-8">
             <h3 className="font-serif text-2xl">No realistic route fits {days} days from {start}</h3>

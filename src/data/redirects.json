@@ -1,0 +1,6 @@
+[
+  { "source": "/plan", "destination": "/plan-your-trip", "permanent": true },
+  { "source": "/feed", "destination": "/rss.xml", "permanent": true },
+  { "source": "/privacy", "destination": "/privacy-policy", "permanent": true },
+  { "source": "/destinations/merzouga", "destination": "/sahara-desert/erg-chebbi-vs-erg-chigaga", "permanent": false }
+]

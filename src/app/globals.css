@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5.5rem;
+  }
+  body {
+    @apply bg-paper text-ink-800 font-sans antialiased;
+    font-feature-settings: 'kern', 'liga';
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif text-ink-900;
+    font-optical-sizing: auto;
+  }
+  ::selection {
+    @apply bg-clay-100 text-ink-900;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-majorelle-600 ring-offset-2 ring-offset-paper;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-site { @apply mx-auto w-full max-w-site px-5 sm:px-8; }
+  .eyebrow { @apply font-sans text-xs font-semibold uppercase tracking-[0.18em] text-clay-700; }
+  .eyebrow-light { @apply font-sans text-xs font-semibold uppercase tracking-[0.18em] text-sand-200; }
+  .display { @apply font-serif text-[2.6rem] leading-[1.04] tracking-[-0.02em] sm:text-6xl lg:text-7xl; }
+  .h-section { @apply font-serif text-3xl leading-tight tracking-[-0.015em] sm:text-4xl; }
+  .lede { @apply text-lg leading-relaxed text-ink-600 sm:text-xl; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-colors duration-200; }
+  .btn-primary { @apply btn bg-clay-600 text-white hover:bg-clay-700; }
+  .btn-dark { @apply btn bg-ink-900 text-paper hover:bg-ink-700; }
+  .btn-outline { @apply btn border border-ink-900/20 text-ink-900 hover:border-ink-900 hover:bg-white; }
+  .btn-light { @apply btn bg-paper text-ink-900 hover:bg-white; }
+  .link-arrow { @apply inline-flex items-center gap-1.5 text-sm font-semibold text-clay-700 underline-offset-4 hover:underline; }
+  .chip { @apply inline-flex items-center rounded-full border border-sand-300 bg-white/70 px-3 py-1 text-xs font-medium text-ink-700; }
+  .card { @apply rounded-2xl bg-white ring-1 ring-sand-200; }
+  .field { @apply w-full rounded-xl border border-sand-300 bg-white px-4 py-3 text-base text-ink-900 placeholder:text-ink-400 focus:border-majorelle-600 focus:outline-none focus:ring-2 focus:ring-majorelle-600/30; }
+  .field-label { @apply mb-1.5 block text-sm font-medium text-ink-700; }
+  .rule-zellige {
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'%3E%3Cg fill='none' stroke='%23C2602F' stroke-width='1'%3E%3Cpath d='M0 7h4l3-3 3 3-3 3-3-3M10 7h8M24 7h4M18 7l3-3 3 3-3 3z'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    opacity: 0.6;
+  }
+  .pattern-zellige {
+    background-color: #201C18;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23C2602F' stroke-opacity='0.35' stroke-width='1'%3E%3Crect x='25' y='25' width='30' height='30'/%3E%3Crect x='25' y='25' width='30' height='30' transform='rotate(45 40 40)'/%3E%3Cpath d='M0 40h10M70 40h10M40 0v10M40 70v10'/%3E%3Ccircle cx='40' cy='40' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  .scrim-b { background: linear-gradient(to top, rgba(21, 18, 15, 0.85) 0%, rgba(21, 18, 15, 0.35) 45%, rgba(21, 18, 15, 0) 75%); }
+  .scrim-hero { background: linear-gradient(to top, rgba(21, 18, 15, 0.9) 0%, rgba(21, 18, 15, 0.45) 40%, rgba(21, 18, 15, 0.15) 75%, rgba(21, 18, 15, 0.35) 100%); }
+}
+
+/* ---------- Article body extras ---------- */
+.article-body .heading-anchor {
+  @apply -ml-6 mr-2 hidden w-4 text-sand-400 no-underline opacity-0 transition-opacity lg:inline-block;
+}
+.article-body h2:hover .heading-anchor,
+.article-body h3:hover .heading-anchor { @apply opacity-100; }
+.article-body .table-wrap { @apply my-8 overflow-x-auto rounded-xl ring-1 ring-sand-200; }
+.article-body .table-wrap table { @apply my-0 min-w-[36rem] bg-white; }
+.article-body .table-wrap th, .article-body .table-wrap td { @apply px-4 py-3 align-top; }
+.article-body .table-wrap thead { @apply bg-sand-100; }
+.article-body .article-figure { @apply my-10; }
+.article-body .article-figure img { @apply my-0 w-full rounded-xl; height: auto; }
+.article-body .article-figure figcaption { @apply mt-3; }
+.article-body .callout { @apply my-8 rounded-xl border-l-4 px-6 py-5 text-base; }
+.article-body .callout p { @apply my-2; }
+.article-body .callout-label { @apply !mt-0 font-sans text-xs font-bold uppercase tracking-[0.14em]; }
+.article-body .callout-tip { @apply border-oasis-600 bg-oasis-50; }
+.article-body .callout-tip .callout-label { @apply text-oasis-700; }
+.article-body .callout-note { @apply border-majorelle-600 bg-majorelle-50; }
+.article-body .callout-note .callout-label { @apply text-majorelle-700; }
+.article-body .callout-warning { @apply border-clay-600 bg-clay-50; }
+.article-body .callout-warning .callout-label { @apply text-clay-700; }
+.article-body .callout-important { @apply border-ink-900 bg-sand-100; }
+.article-body .callout-important .callout-label { @apply text-ink-900; }
+
+/* ---------- Header mega menu (CSS only, keyboard accessible) ---------- */
+.nav-item:hover > .mega,
+.nav-item:focus-within > .mega { @apply visible translate-y-0 opacity-100; }
+.mega { @apply invisible translate-y-1 opacity-0 transition duration-150; }
+
+/* Scroll reveal: progressive enhancement only */
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-reveal] { opacity: 0; transform: translateY(14px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .js [data-reveal].is-visible { opacity: 1; transform: none; }
+}
+
+/* Map */
+.map-pin { transition: transform 0.15s ease; transform-box: fill-box; transform-origin: center; }
+.map-link:hover .map-pin, .map-link:focus .map-pin { transform: scale(1.35); }
+.map-link:hover .map-label, .map-link:focus .map-label { fill: #8A3F1B; font-weight: 700; }
+
+@media print {
+  header, footer, .no-print { display: none !important; }
+  .article-body { font-size: 11pt; }
+}
